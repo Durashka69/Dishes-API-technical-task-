@@ -11,7 +11,8 @@ from create_menu import create_menu
 
 
 def main():
-    if Ingredient.objects.count() > 0:
+
+    if Ingredient.objects.count() > 0 or not settings.CREATE_TEST_DATA:
         return
 
     Ingredient.objects.bulk_create(ingredients_models_data) # creating ingredients data
