@@ -44,9 +44,9 @@ class WeatherClient:
         app.conf.beat_schedule = {
             'request_daily_weather': {
                 'task': 'WeatherClient.request_daily_weather',
-                # 'schedule': crontab(hour=4, minute=52)
+                'schedule': crontab(hour=9, minute=00)
                 # 'schedule': crontab(minute='*')
-                "schedule": crontab(minute="*/10"),
+                # "schedule": crontab(minute="*/10"),
             }
         }
         app.conf.timezone = 'Asia/Bishkek'
